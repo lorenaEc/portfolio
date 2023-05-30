@@ -3,16 +3,16 @@ import { About } from "Components/About";
 import { Footer } from "Components/Footer";
 import { Skills } from "Components/Skills";
 import { Portfolio } from "Components/Portfolio";
-import { Contact } from "Components/Contact";
 
 const App = () => {
   return (
     <div className="min-h-screen flex-col justify-center items-center">
       <Header />
-      <About />
-      <Skills />
-      <Portfolio />
-      <Contact />
+      <main className="mx-auto px-6 text-left lg:text-center lg:px-12 ">
+        <About />
+        <Skills />
+        <Portfolio />
+      </main>
       <Footer />
     </div>
   );
