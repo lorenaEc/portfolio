@@ -6,14 +6,19 @@ export const Footer = () => {
   return (
     <section
       id="footer"
-      className="flex flex-col items-center p-8 bg-slate-500 mt-[75px]"
+      className="flex flex-col items-center p-8 bg-gray-100 mt-[50px] lg:mt-[75px]"
     >
-      <p className="text-3xl tett-bold py-4 font-bold">Contact</p>
+      <p className="text-3xl tett-bold py-4 text-slate-800 font-bold">
+        Contact
+      </p>
       <div className="flex w-full justify-center flex-wrap py-4 gap-2 md:gap-0">
         <div className="flex flex-col items-center gap-2 w-full md:w-1/3">
           <div className="flex items-center gap-2">
             <FiMail />
-            <a className="font-bold" href="mailto:lorena.echeverry@hotmail.com">
+            <a
+              className="font-bold text-slate-800"
+              href="mailto:lorena.echeverry@hotmail.com"
+            >
               lorena.echeverry@hotmail.com
             </a>
           </div>
@@ -21,7 +26,7 @@ export const Footer = () => {
         <div className="flex flex-col items-center gap-2 w-full md:w-1/3">
           <div className="flex items-center gap-2">
             <FiPhone />
-            <a className="font-bold" href="073-5173049">
+            <a className="font-bold text-slate-800" href="073-5173049">
               073-5173049
             </a>
           </div>
@@ -32,6 +37,7 @@ export const Footer = () => {
             <p className="flex gap-2 h-full items-center">
               <BsLinkedin>
                 <a
+                  className="text-slate-800"
                   href="www.linkedin.com/in/
 lorena-e-3b24a5220
 "

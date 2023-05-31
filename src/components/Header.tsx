@@ -4,11 +4,11 @@ export const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <header className="h-52 lg:h-96 bg-[url('/new.jpg')] bg-cover flex flex-col text-white">
+    <header className="h-24 w-[90vw] lg:pt-20 lg:h-96 rounded-lg lg:bg-[url('/gray.jpg')] bg-cover flex flex-col text-white">
       {/* MOBILE */}
-      <div className="fixed top-0 w-full bg-black opacity-90 lg:hidden">
-        <div className="flex justify-between p-4 max-w-7xl">
-          <div className="flex items-center gap-6">
+      <div className="fixed top-0 w-xl bg-slate-800 lg:hidden">
+        <div className="flex justify-between py-4 w-[90vw]">
+          <div className="flex w-1/2 items-center gap-6">
             <button
               id="hamburger-button"
               className={`h-8 w-8 cursor-pointer text-3xl lg:hidden ${
@@ -23,21 +23,23 @@ export const Header = () => {
             </button>
             <p className="text-3xl font-bold uppercase">Lorena</p>
           </div>
-          <button className="bg-red-200 rounded-3xl p-2 w-auto text-black font-semibold">
-            CV
-          </button>
+          <div className="w-1/2 flex justify-end">
+            <button className="bg-red-200 rounded-3xl px-3 w-auto text-slate-800 text-lg font-bold">
+              CV
+            </button>
+          </div>
         </div>
       </div>
 
       {showMenu && (
         <section
           id="mobile-menu"
-          className="top-68 fixed top-0 flex w-full origin-top animate-open-menu flex-col justify-center bg-black text-5xl"
+          className="top-68 fixed top-0 flex w-full origin-top animate-open-menu flex-col justify-center bg-slate-800 text-5xl"
           onClick={() => setShowMenu((prev) => !prev)}
         >
           <button className="fixed top-4 left-4">x</button>
           <nav
-            className="flex min-h-screen flex-col items-center justify-center py-8 gap-14 text-white"
+            className="flex min-h-screen flex-col items-center justify-center py-8 gap-14 text-gray-100"
             aria-label="mobile"
           >
             <a href="#about">
@@ -58,11 +60,13 @@ export const Header = () => {
 
       {/* DESKTOP */}
       <div className="hidden lg:block h-full">
-        <div className="fixed top-0 w-full bg-black opacity-90">
-          <div className="flex justify-between mx-10 my-6">
-            <div className="flex items-center gap-8">
-              <p className="text-3xl font-bold uppercase">Lorena</p>
-              <nav className="flex gap-4 text-white text-xl">
+        <div className="fixed top-0 w-full bg-slate-800">
+          <div className="flex justify-between w-[90vw] my-6">
+            <div className="flex justify-start w-1/2 items-center gap-8">
+              <p className="text-3xl font-bold uppercase text-gray-100">
+                Lorena
+              </p>
+              <nav className="flex gap-4 text-gray-100 text-xl">
                 <a href="#about" className="hover:opacity-75">
                   <p>Om mig</p>
                 </a>
@@ -77,16 +81,18 @@ export const Header = () => {
                 </a>
               </nav>
             </div>
-            <button className="bg-red-200 rounded-3xl px-4 text-black font-semibold hover:opacity-75">
-              CV
-            </button>
+            <div className="w-1/2 flex justify-end">
+              <button className="bg-red-200 rounded-3xl px-4 text-slate-800 text-lg font-bold hover:opacity-75">
+                CV
+              </button>
+            </div>
           </div>
         </div>
 
         <div className="h-full flex items-center justify-center">
-          <h1 className="text-center text-4xl text-white font-bold">
+          <h1 className="text-center text-4xl text-slate-800 font-bold">
             Hej! Mitt namn är Lorena och jag <br />
-            <p className="text-red-200">en Junior Full-stack utvecklare</p>
+            <p className="text-slate-800">en Junior Full-stack utvecklare</p>
           </h1>
         </div>
       </div>
